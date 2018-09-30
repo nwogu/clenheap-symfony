@@ -1,0 +1,127 @@
+{% extends 'dashboard/index.html.twig' %}
+
+
+
+{% block content %}
+<div class="col-xs-12 col-sm-9">
+<h2>Subscription</h2>
+<hr>
+          <div class="jumbotron">
+          {% if user.isActive == false %}
+          <h1>Inactive</h1>
+            <p>Your subscription is not active. Activate your subscription to continue enjoying any of our plans.</p>
+          {% else %}
+            {% if user.plan is same as ('small') %}
+            <h1>Small Plan</h1>
+            <p>You are on the small plan. You are entitled to 3 hours of cleaning every week. Your subscription is valid for one month</p>
+            {% elseif user.plan is same as ('medium') %}
+            <h1>Medium Plan</h1>
+            <p>You are on the medium plan. You are entitled to 5 hours of cleaning every week. Your subscription is valid for one month</p>
+            {% else %}
+            <h1>Large Plan</h1>
+            <p>You are on the Large plan. You are entitled to 7 hours of cleaning every week. Your subscription is valid for one month</p>
+            {% endif %}
+          {% endif %}
+
+            <div class="row">
+            <div class="col-6">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#planModal">
+              Change Plan
+            </button>
+            </div>
+
+            <div class="col-6">
+            
+            {% if user.isActive == true %}
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#manageSubModal">
+              Pause Plan
+            </button>
+            {% else %}
+           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#manageSubModal">
+              Activate Plan
+            </button>
+            {% endif %}
+            </div>
+
+            </div>
+
+          </div>
+         
+        </div><!--/.col-xs-12.col-sm-9-->
+
+
+        {# Modal #}
+<form method='post' action='{{ path('change-plan') }}'>
+<div class="modal fade" id="planModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Change Your Plan</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <select name='plan' class='form-control'>
+       <option value='small'> Small Plan- ₦8,500/Month | 3 Hours/Week</option>
+       <option value='medium'> Medium Plan- ₦14,500/Month | 5 Hours/Week </option>
+       <option value='large'> Large Plan- ₦20,500/Month | 5 Hours/Week </option>
+       </select>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+
+<form method='post' action='{{ path('manage-plan') }}'>
+<div class="modal fade" id="manageSubModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      {% if user.isActive == true %}
+        <h5 class="modal-title" id="exampleModalLabel">Pause Plan</h5>
+      {% else %}
+      <h5 class="modal-title" id="exampleModalLabel">Activate Plan</h5>
+      {% endif %}
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="form-check">
+          {% if user.isActive == true %}
+            
+              Are You Sure You Want To Pause Your Subscription?
+            
+            {% else %}
+            <label class="form-check-label" for="defaultCheck1">
+              Choose A Plan To Activate
+            </label>
+            <select name='plan' class='form-control'>
+       <option value='small'> Small Plan- ₦8,500/Month | 3 Hours/Week</option>
+       <option value='medium'> Medium Plan- ₦14,500/Month | 5 Hours/Week </option>
+       <option value='large'> Large Plan- ₦20,500/Month | 5 Hours/Week </option>
+       </select>
+            {% endif %}
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" name='submit'
+        {% if user.isActive == true %}
+        value='pause'
+        {% else %}
+        value='activate'
+        {% endif %}
+        >Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+
+{% endblock %}

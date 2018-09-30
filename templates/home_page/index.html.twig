@@ -1,0 +1,386 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+<header class="bg-gradient" id="home">
+    <div class="container mt-5">
+        <h1>Get Your Home Thoroughly Cleaned</h1>
+            <p class="tagline">Completely Intensive Cleaning, Once Every Week</p>
+            <a href="#pricing" class="btn btn-primary btn-md btn-light" style="margin-top: 30px">Subscribe Now</a>
+    </div>
+    <div class="img-holder mt-3"><img src="{{ asset('images/broom-2027093_640.png') }}" alt="phone" class="img-fluid">
+            <br>
+    </div>                  
+</header>
+
+ <div class="section light-bg" id="features">
+
+
+        <div class="container">
+
+            <div class="section-title">
+                <small>HOW IT WORKS</small>
+                <h3>Cleanheap works in 3 easy steps</h3>
+            </div>
+
+
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="media">
+                                <span class="ti-desktop gradient-fill ti-3x mr-3"></span>
+                                <div class="media-body">
+                                    <h4 class="card-title">Subscribe Monthly</h4>
+                                    <p class="card-text">Make a monthly subscription to one of our cleaning packages through our website and a professional cleaner will be assigned to you</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="media">
+                                <span class="ti-brush gradient-fill ti-3x mr-3"></span>
+                                <div class="media-body">
+                                    <h4 class="card-title">Get Cleaned</h4>
+                                    <p class="card-text">Once a week, our verified and competent cleaner arrives at your house to give a thorough and intensive clean</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="media">
+                                <span class="ti-face-smile gradient-fill ti-3x mr-3"></span>
+                                <div class="media-body">
+                                    <h4 class="card-title">Take a Break</h4>
+                                    <p class="card-text">Do whatever you like, watch a movie, hang out with the kids while our cleaners do the heavylifting</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <div class="section">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 ">
+                    <h2>All our cleaners are background checked and verified</h2>
+                    <h3>From ₦8500 per month</h3>
+                    <p class="mb-4">Best cleaning value your money can buy</p>
+                    <a href="#pricing" class="btn btn-primary">Subscribe Now</a>
+                </div>
+                <div class="col-lg-6 ">
+                    <div class="perspective-phone">
+                <img src="{{ asset('images/mop-30035_641.png') }}" alt="perspective phone" class="img-fluid">
+            </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+
+    <div class="section light-bg" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <small>CATEGORIES</small>
+                <h3>Our services cover every corner of the home</h3>
+            </div>
+
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#communication">Living Room</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#schedule">Bedroom</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#messages">Kitchen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#livechat">Bathroom</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="communication">
+                    <div class="d-flex flex-column flex-lg-row">
+                        <img src="{{ asset('images/living-1032733_640.jpg') }}" width="223" height="286" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
+                        <div>
+
+                            <h2>Living Room</h2>
+                            <p class="lead">Cleanheap general cleaning of the living room includes</p>
+                            
+                                <p>Dusting of furniture and surfaces</p>
+                                <p>Dusting and wiping of electronics, pictures frames etc.</p>
+                                <p>Mopping/vacuuming of floors</p>
+                                <p>Dusting and wiping of fixtures</p>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="schedule">
+                    <div class="d-flex flex-column flex-lg-row">
+                         <img src="{{ asset('images/bed-1839183_640.jpg') }}" width="223" height="286" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
+                        <div>
+                            <h2>Bedroom</h2>
+                            <p class="lead">Cleanheap general cleaning of the bedroom includes</p>
+                            <p>Making bed</p>
+                                <p>Folding or hanging of clothes in bedroom</p>
+                                <p>Mopping/vacuuming of floors</p>
+                                <p>Dusting and wiping of surfaces and furniture</p>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="messages">
+                    <div class="d-flex flex-column flex-lg-row">
+                        <img src="{{ asset('images/kitchen-2165756_640.jpg') }}" alt="graphic" width="223" height="286" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
+                        <div>
+                            <h2>Kitchen</h2>
+                            <p class="lead">Cleanheap general cleaning of the kitchen includes</p>
+                                <p>Washing of dishes</p>
+                                <p>Wiping outside of fridge and cupboards</p>
+                                <p>Mopping/vacuuming of floors</p>
+                                <p>Emptying and cleaning refuse bin area</p>
+                                <p>Wiping of surfaces, sink and appliances</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="livechat">
+                    <div class="d-flex flex-column flex-lg-row">
+                        <img src="{{ asset('images/bathroom-1872193_640.jpg') }}" alt="graphic" width="223" height="286" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
+                        <div>
+                            <h2>Bathroom</h2>
+                            <p class="lead">Cleanheap general cleaning of the bathroom includes</p>
+                                <p>Cleaning of toilet and bath tubs</p>
+                                <p>Wiping of walls and mirrors</p>
+                                <p>Mopping/vacuuming of floors</p>
+                                <p>Emptying and cleaning refuse bin area</p>
+                                <p>Folding or hanging of clean towels</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="section">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 ">
+                    <h2>Cleaning backed by guarantee</h2>
+                    <h3>The Cleanheap Promise</h3>
+                    <p class="mb-4">At no extra cost, we will send over another cleaner if you aren't satisfied with your cleaning.</p>
+                    <a href="#pricing" class="btn btn-primary">Subscribe Now</a>
+                </div>
+                <div class="col-lg-6 ">
+                    <div class="perspective-phone mt-3">
+                <img src="{{ asset('images/promise.png') }}" alt="perspective phone" class="img-fluid">
+            </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="section-title">
+                <small>TESTIMONIALS</small>
+                <h3>What our Customers Says</h3>
+            </div>
+
+            <div class="testimonials owl-carousel">
+                <div class="testimonials-single">
+                    <img src="" alt="" class="client-img">
+                    <blockquote class="blockquote">The subscription process was smooth, payment was secure and Ada was very professional. Excellent service. I would recommend cleanheap anytime.</blockquote>
+                    <h5 class="mt-4 mb-2">Mrs Nkiru Adelabu</h5>
+                    <p class="text-primary">Northen Foreshore, Chevron-drive, Lekki</p>
+                </div>
+                <div class="testimonials-single">
+                    <img src="" alt="" class="client-img">
+                    <blockquote class="blockquote">The cleaners are great. Organized my stuff perfectly.</blockquote>
+                    <h5 class="mt-4 mb-2">Mr Godwin Agu</h5>
+                    <p class="text-primary">Femi Okunnu Estate, Jakande, Lekki</p>
+                </div>
+                <div class="testimonials-single">
+                    <img src="" alt="" class="client-img">
+                    <blockquote class="blockquote">The subscription process was very easy and the cleaner arrived on time. Most def, using these guys again.</blockquote>
+                    <h5 class="mt-4 mb-2">Mrs Vivian Nwogu</h5>
+                    <p class="text-primary">Agungi, Lekki</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+     <div class="section" id="pricing">
+        <div class="container">
+            <div class="section-title">
+                <small>PRICING</small>
+                <h3>you can switch plans at any time</h3>
+            </div>
+
+            <div class="card-deck">
+                <div class="card pricing popular">
+                    <div class="card-head">
+                        <small class="text-primary">SMALL</small>
+                        <span class="price">₦8,500<sub>/m</sub></span>
+                        <small>Recommended for homes with 2 bedrooms or less</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <div class="list-group-item">3 hours per week</div>
+                        <div class="list-group-item">Living Room</div>
+                        <div class="list-group-item">Bedroom</div>
+                        <div class="list-group-item">Bathroom</div>
+                        <div class="list-group-item">Kitchen</div>
+                        <!--<div class="list-group-item"><del>Collaboration</del></div>-->
+                        <!--<div class="list-group-item"><del>Reports and analytics</del></div>-->
+                    </ul>
+                    <div class="card-body">
+                        <a href="/subscribe?plan=small" class="btn btn-primary btn-lg btn-block">Choose this Plan</a>
+                    </div>
+                </div>
+                <div class="card pricing popular">
+                    <div class="card-head">
+                        <small class="text-primary">MEDIUM</small>
+                        <span class="price">₦14,500<sub>/m</sub></span>
+                        <small>Recommended for homes with 3 bedrooms or less</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <div class="list-group-item">5 hours per week</div>
+                        <div class="list-group-item">Living Room</div>
+                        <div class="list-group-item">Bedroom</div>
+                        <div class="list-group-item">Bathroom</div>
+                        <div class="list-group-item">Kitchen</div>
+                    </ul>
+                    <div class="card-body">
+                        <a href="/subscribe?plan=medium" class="btn btn-primary btn-lg btn-block">Choose this Plan</a>
+                    </div>
+                </div>
+                <div class="card pricing popular">
+                    <div class="card-head">
+                        <small class="text-primary">LARGE</small>
+                        <span class="price">₦20,500<sub>/m</sub></span>
+                        <small>Recommended for homes with more than 3 bedrooms</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                         <div class="list-group-item">7 hours per week</div>
+                        <div class="list-group-item">Living Room</div>
+                        <div class="list-group-item">Bedroom</div>
+                        <div class="list-group-item">Bathroom</div>
+                        <div class="list-group-item">Kitchen</div>
+                    </ul>
+                    <div class="card-body">
+                        <a href="/subscribe?plan=large" class="btn btn-primary btn-lg btn-block">Choose this Plan</a>
+                    </div>
+                </div>
+            </div>
+             
+             <!--// end .pricing-->
+
+
+        </div>
+
+    </div>
+
+    <div class="section pt-0" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <small>FAQ</small>
+                <h3>Frequently Asked Questions</h3>
+            </div>
+
+            <div class="row pt-4">
+                <div class="col-md-6">
+                    <h4 class="mb-3">Can I trust your cleaners in my home?</h4>
+                    <p class="light-font mb-5">Absolutely. All our cleaners go through a thorough background check, criminal background check and are fully insured. </p>
+                    <h4 class="mb-3">Do I have to subscribe before a cleaner is assigned to me?</h4>
+                    <p class="light-font mb-5">Yes. You have to purchase one of our monthly plans to access our service. Our payment process is secured and regulated by our payment partners.</p>
+
+                </div>
+                <div class="col-md-6">
+                    <h4 class="mb-3">Will your cleaners bring their cleaning items?</h4>
+                    <p class="light-font mb-5">Cleaners come with the neccesary wiping towel and cleaning detergent, but you'd be responsible for other items like mop-sticks, brushes, brooms and water.</p>
+                    <h4 class="mb-3">Can I cancel my subscription?</h4>
+                    <p class="light-font mb-5">Absolutely. Just Navigate to your account section on the website and cancel.</p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section bg-gradient">
+        <div class="container">
+            <div class="call-to-action">
+
+                <!-- <div class="box-icon"><span class="ti-book gradient-fill ti-3x"></span></div> -->
+                <h2>Your cleaner is a few hours away</h2>
+               <!--  <p class="tagline">Available for all major mobile and desktop platforms. Rapidiously visualize optimal ROI rather than enterprise-wide methods of empowerment. </p> -->
+                <div class="my-4">
+
+                    <a href="#pricing" class="btn btn-light"><!-- <img src="images/appleicon.png" alt="icon"> --> Subscribe Now</a>
+                    <!-- <a href="#" class="btn btn-light"><img src="images/playicon.png" alt="icon"> Google play</a> -->
+                </div>
+                <!-- <p class="text-primary"><small><i>*Works on iOS 10.0.5+, Android Kitkat and above. </i></small></p> -->
+            </div>
+        </div>
+
+    </div>
+    <!-- // end .section -->
+
+    <div class="light-bg py-5" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center text-lg-left">
+                    <p class="mb-2"> <span class="ti-location-pin mr-2"></span>51, Oluwole Akinosho St, Lekki, Lagos</p>
+                    <div class=" d-block d-sm-inline-block">
+                        <p class="mb-2">
+                            <span class="ti-email mr-2"></span> <a class="mr-4" href="mailto:hello@cleanheap.com">hello@cleanheap.com</a>
+                        </p>
+                    </div>
+                    <div class="d-block d-sm-inline-block">
+                        <p class="mb-0">
+                            <span class="ti-headphone-alt mr-2"></span> <a href="tel:08137507119">08137507119</a>
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-lg-6">
+                    <div class="social-icons">
+                        <a href="#"><span class="ti-facebook"></span></a>
+                        <a href="#"><span class="ti-twitter-alt"></span></a>
+                        <a href="#"><span class="ti-instagram"></span></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+{% endblock %}

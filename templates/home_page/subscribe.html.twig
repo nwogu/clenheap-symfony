@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+
+    <div class="section">
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 card shadow-md" style="padding-top:20px; padding-left:20px">
+                    <div class="panel panel-primary">
+                            <div class="panel panel-body">
+                            {{form_start(form)}}
+                            {{form_widget(form)}}
+                            </div>
+                    </div>
+                    <div class="panel panel-footer">
+                     {{ form_widget(form.save) }}
+                    </div>
+                    {{form_end(form)}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

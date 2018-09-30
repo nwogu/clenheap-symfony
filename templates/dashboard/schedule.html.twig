@@ -1,0 +1,35 @@
+{% extends 'dashboard/index.html.twig' %}
+
+
+
+{% block content %}
+<div class="col-12">
+<h2> Cleaning Schedule </h2>
+<table class="table table-striped">
+            <thead class='thead-dark'>
+              <tr>
+                <th>#</th>
+                <th>Cleaning Date</th>
+                <th>Cleaning Time</th>
+                <th>Cleaning Hours</th>
+                <th>Cleaner</th>
+                <th>Address</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for schedule in user.schedule %}
+              <tr>
+                <td>{{loop.index}}</td>
+                <td>{{schedule.cleaningDate|date('F j, Y')}}</td>
+                <td>{{schedule.cleaningTime}} o'clock</td>
+                <td>{{schedule.cleaningHours}} Hours</td>
+                <td>{{schedule.cleaner.firstName}} {{schedule.cleaner.lastName}}</td>
+                <td>{{user.address}}</td>
+                <td><a href='{{ path('manage-schedule', {'id': schedule.id}) }}' class='btn btn-primary'>Manage</a></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+</div>
+{% endblock %}

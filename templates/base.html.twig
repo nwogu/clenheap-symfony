@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Cleanheap - On demand home cleaning">
+    <meta name="keywords" content="home, cleaning, house, cleaner, laundry, realestate, maid">
+    
+
+    <title>Cleanheap</title>
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/themify-icons.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="dns-prefetch" />
+    {% block head %}{% endblock %}
+    </head>
+    <body data-spy="scroll" data-target="#navbar" data-offset="30">
+    <div class="nav-menu fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-dark navbar-expand-lg">
+                    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                        <a class="navbar-brand" href="/dashboard">cleanheap</a>
+                        {% else %}
+                        <a class="navbar-brand" href="/">cleanheap</a>
+                        {% endif %}
+                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                        <div class="collapse navbar-collapse" id="navbar">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item"> <a class="nav-link active" href="/">HOME <span class="sr-only">(current)</span></a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="/#features">HOW IT WORKS</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="/#gallery">CATEGORIES</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="/#faq">FAQs</a> </li>
+                                {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                                    <li class="nav-item"> <a class="btn btn-outline-light my-3 my-sm-0 ml-lg-3" href="{{ path('logout') }}">LOGOUT</a> </li>
+                                {% else %}
+                                    <li class="nav-item"> <a class="btn btn-outline-light my-3 my-sm-0 ml-lg-3" href="{{ path('login') }}">LOGIN</a> </li>
+                                    <li class="nav-item"><a href="#pricing" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Subscribe Now</a></li>
+                                {% endif %}
+                                
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+        <header class="bg-gradient" id="home"></header>
+        {% for flash_message in app.session.flashbag.get('error') %}
+        <div class="alert alert-info alert-dismissible" role="alert">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <div style="padding-right:50px">{{flash_message}}</div>
+        </div>
+        {% endfor %}
+        {% block body %}{% endblock %}
+        
+        <footer class="my-5 text-center">
+        <!-- Copyright -->
+        <p class="mb-2"><small>COPYRIGHT © 2017. CLEANHEAP TECHNOLOGIES LIMITED.</small></p>
+    </footer>
+<script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('js/script.js') }}"></script>
+{% block javascripts %}{% endblock %}
+    </body>
+</html>
